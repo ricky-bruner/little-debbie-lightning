@@ -80,7 +80,8 @@ function popSnacks(){
         <h2>SCHNAAAAAAKS!</h2>
     </header>
     <div class="snack-container"></div>
-    <button id="add-snacks-button">Add More Snacks?</button>`;
+    <button id="add-snacks-button">Add More Snacks?</button>
+    <footer></footer>`;
     const addSnacksButton = document.querySelector("#add-snacks-button");
     addSnacksButton.addEventListener("click", showForm);
     let snack = document.querySelector(".snack-container");

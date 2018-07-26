@@ -1,9 +1,31 @@
 /* rgb(226, 209, 190) */
 /* rgb(223, 30, 56) */
-
-body{
-    background-color: rgb(226, 209, 190);
+/* html {
+    background: 
+        radial-gradient(
+            circle, 
+            rgb(226, 209, 190), 
+            rgb(226, 209, 190), 
+            rgb(226, 209, 190), 
+            black) no-repeat;
+    background-position: fixed;
     color: white;
+    height: 100% !important
+} */
+body{
+    background: 
+        radial-gradient(
+            circle, 
+            rgb(226, 209, 190), 
+            rgb(226, 209, 190), 
+            rgb(226, 209, 190), 
+            black) no-repeat;
+    background-size: cover;
+    background-position: fixed;
+    color: white;
+}
+#main-content {
+    height: 100% !important
 }
 header {
     display: flex;
@@ -49,6 +71,7 @@ header {
     border-radius: 10px;
     box-shadow: 0 12px 6px -6px rgba(0, 0, 0, 0.6);
     text-align: center;
+    margin-bottom: 1.5em;
 }
 header img {
     height: 150px;
@@ -59,16 +82,25 @@ header img {
     width: 60%;
     height: 200px;
     display: block;
-    margin: auto;
-    margin-top: 20%;
+    margin: 25% auto 25%;
+    /* margin-top: 20%; */
     font-size: 2.5em;
     color: #131313;
-    background: radial-gradient(
-        #e7e5e4, 
-        #e7e5e4, 
-        #e7e5e4, 
-        #e7e5e4, 
-        #e7e5e4, rgb(136, 0, 0));
+    background: 
+        radial-gradient(
+            circle, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            rgb(223, 30, 56), 
+            black);
     letter-spacing: .15em;
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
     text-transform: uppercase;
@@ -114,11 +146,25 @@ header img {
     width: 60%;
     height: 200px;
     display: block;
-    margin: auto;
-    margin-top: 20%;
+    margin: 25% auto 25%;
+    /* margin-top: 20%; */
     font-size: 2.5em;
     color: #131313;
-    background: radial-gradient(#e7e5e4, #e7e5e4, #e7e5e4, #e7e5e4, #e7e5e4, rgb(136, 0, 0));
+    background: 
+        radial-gradient(
+            circle, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            rgb(223, 30, 56), 
+            black);
     letter-spacing: .15em;
     font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
     text-transform: uppercase;
@@ -166,9 +212,10 @@ header img {
     justify-content: space-around;
     flex-wrap: wrap;
     font-family: Arial, Helvetica, sans-serif;
-    background: radial-gradient(circle, rgb(108, 119, 164), black);
+    background: radial-gradient(circle, rgb(108, 119, 164), rgb(108, 119, 164), black);
     padding: 1em;
     border-radius: 10px;
+    box-shadow: 0 12px 6px -6px rgba(0, 0, 0, 0.6);
 }
 .snack-card {
     width: 25%;
@@ -209,7 +256,7 @@ h3 {
 
 form {
     width: 60%;
-    background: radial-gradient(circle, black, dimgrey);
+    background: radial-gradient(circle, dimgrey, black);
     border-radius: 5px;
     padding: 1em;
     margin: 1em auto;
@@ -219,11 +266,31 @@ input {
     width: 80%;
     padding: 1em;
     margin: 1em auto;
-
+    border-radius: 5px;
+    font-size: 1.1em;
 }
 form button {
-    display:block;
-    margin: 1.5em auto;
+    width: 50%;
+    height: 100px;
+    display: block;
+    margin: 10% auto;
+    font-size: 1em;
+    color: #131313;
+    background: 
+        radial-gradient(
+            circle, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            rgb(223, 30, 56), 
+            black);
+    padding: 1em;
+    border-radius: 5px;
+    box-shadow: 0 12px 6px -6px rgba(0, 0, 0, 0.6);
+    text-align: center;
+    border: rgba(0, 0, 0, 0) solid 1px;
 }
 #add-snacks-button {
     width: 20%;
@@ -232,7 +299,16 @@ form button {
     margin: 10% auto;
     font-size: 1.5em;
     color: #131313;
-    background: radial-gradient(#e7e5e4, #e7e5e4, #e7e5e4, #e7e5e4, #e7e5e4, rgb(136, 0, 0));
+    background: 
+        radial-gradient(
+            circle, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            #e7e5e4, 
+            rgb(223, 30, 56), 
+            black);
     padding: 1em;
     border-radius: 5px;
     box-shadow: 0 12px 6px -6px rgba(0, 0, 0, 0.6);

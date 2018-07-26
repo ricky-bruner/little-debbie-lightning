@@ -31,7 +31,7 @@ function populateDB(){
     setData("Little Debbie Snacks", debbieCakes);
     mainContent.removeChild(loadButton);
     mainContent.innerHTML += 
-    `<button id="show-snacks">Show Teh Schnacks</button>`
+    `<button id="show-snacks">Show The Schnacks</button>`
     const showSnacks = document.querySelector("#show-snacks");
     showSnacks.addEventListener("click", popSnacks)
 }
