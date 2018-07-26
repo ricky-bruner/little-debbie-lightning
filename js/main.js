@@ -75,7 +75,10 @@ function popSnacks(){
     const showSnacks = document.querySelector("#show-snacks")
     mainContent.removeChild(showSnacks);
     mainContent.innerHTML +=
-    `<h2>SCHNAAAAAAKS!</h2>
+    `<header>
+        <img src="../images/lildeb.png" alt="Little Debbie Logo">
+        <h2>SCHNAAAAAAKS!</h2>
+    </header>
     <div class="snack-container"></div>
     <button id="add-snacks-button">Add More Snacks?</button>`;
     const addSnacksButton = document.querySelector("#add-snacks-button");
