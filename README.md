@@ -17,5 +17,10 @@ There are numerous issues that came up, from scope all the way to a full on page
 
 Another big issue was image size. I searched google for images exactly 250px by 250px for the initial cards, and once I got the user loaded info to work, the images were pushing the text outside of the cards. To fix this, I targed the card images in CSS and set their height to 250px, so no matter what the user loads, the image wont push the text out of the cards. This will lead to some wonky images, but atleast its all contained for now! For best results, find images that are square :)
 
+## Recent Changes:
+I had a major breakthrough! I wanted the user to be able to add new snacks via the form, and them show up the next time the user visited th page. Sounds simple, but it was super complex to pull off! I totally reworked the function to add a new snack to also incorporate adding a new database to local storage. I did this because the original DB is being overwritten on page load due to the assignment parameters. So I made an empty array and set it equal to the loaded DB from local storage. Then, the users info is used in a very similar new function for making the cake object that then pushed the new cake object into the new array. That array is then used to set the new DB into local storage.
+
+After this, I added conditionals to check for the presence of the new DB, and if it is there, it will then use that DB to populate all of the cards! I also used a conditional to make sure that the empty array is overwritten with the new local storage DB everytime the form is submitted. After hours of trial and error, it worked. It finally worked. I then added a conditional to the input fields that wont let a card generate if any input is empty.
+
 ## Future Changes Incoming:
 Style, Style, Style. I'll find a consistant theme and make it look snazzy.
