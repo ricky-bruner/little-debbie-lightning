@@ -24,7 +24,7 @@ Another big issue was image size. I searched google for images exactly 250px by 
 
 I had a major breakthrough! I wanted the user to be able to add new snacks via the form, and them show up the next time the user visited the page. Sounds simple, but it was super complex to pull off! I totally reworked the snack adding function to also incorporate adding a new database to local storage. I did this because the original DB is being overwritten on page load due to the assignment parameters. So I made a new array and set it equal to the loaded DB from local storage. Then, the users info is used in a very similar new function for making the cake object that then pushed the new cake object into the new array. That array is then used to set the new DB into local storage.
 
-```
+```js
 let newDebbieCakes = loadData("littleDebbieSnacks");
 if(localStorage.getItem("newLittleDebbieSnacks")){
     newDebbieCakes = loadData("newLittleDebbieSnacks")
@@ -44,7 +44,7 @@ function userMadeCakeObject(snackCake, name, packaging, description, amount, ima
 
 After this, I added conditionals to check for the presence of the new DB, and if it is there, it will then use that DB to populate all of the cards! 
 
-```
+```js
 let debbieData = loadData("littleDebbieSnacks")
 if(localStorage.getItem("newLittleDebbieSnacks")){
     debbieData = loadData("newLittleDebbieSnacks")
@@ -54,7 +54,7 @@ if(localStorage.getItem("newLittleDebbieSnacks")){
 
 I also used a conditional to make sure that the empty array is overwritten with the new local storage DB everytime the form is submitted. After hours of trial and error, it worked. It finally worked. I then added a conditional to the input fields that wont let a card generate if any input is empty.
 
-```
+```js
 if(snackCake === "" || name === "" || packaging === "" || description === "" || amount === "" || image === ""){
     console.log("does this work?");
 } else {
