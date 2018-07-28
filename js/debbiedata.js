@@ -21,7 +21,7 @@ makeCakeObject("oatmealCremePie", "Oatmeal Creme Pie", "Individually Wrapped", "
 
 makeCakeObject("nuttyBars", "Nutty Bars", "Twin Wrapped", "Classic crunchy wafer bars layered with peanut butter and covered in rich chocolate fudge.", 12, "../images/nuttybar.jpg");
 
-// debbieCakes.push(starCrunch, swissCakeRoll, oatmealCremePie, nuttyBar);
+
 
 function setData(nameTag, jsObject){
     let stringifiedObject = JSON.stringify(jsObject);
@@ -37,6 +37,3 @@ function populateDB(){
     showSnacks.addEventListener("click", popSnacks)
 }
 
-// function addMoreSnacks(){
-//     name = 
-// }
