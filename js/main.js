@@ -20,7 +20,6 @@ const mainContent = document.querySelector("#main-content");
 mainContent.innerHTML +=
     `<button id="populateDatabase">Load Snacks!</button>`;
 
-
 const loadButton = document.querySelector("#populateDatabase");
 
 function userAddedSnacks(){
@@ -72,7 +71,6 @@ function userAddedSnacks(){
         addSnacksButton.addEventListener("click", showForm);
     }
 }
-
 
 function showForm(){
     console.log("A form will be added here!");
