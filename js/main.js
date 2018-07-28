@@ -2,9 +2,12 @@ function loadData(nameTag){
     let stringifiedObject = localStorage.getItem(nameTag);
     let parsedObject = JSON.parse(stringifiedObject);
     return parsedObject;
-}
 
-const debbieData = loadData("Little Debbie Snacks")
+}
+let debbieData = loadData("littleDebbieSnacks")
+if(localStorage.getItem("newLittleDebbieSnacks")){
+    debbieData = loadData("newLittleDebbieSnacks")
+} 
 
 const body = document.querySelector("body");
 const script = document.querySelector("script");
@@ -22,28 +25,41 @@ const loadButton = document.querySelector("#populateDatabase");
 
 function userAddedSnacks(){
     console.log("Did we get here?");
+    let snackCake = document.querySelector("#snackNameInput").value;
     let name = document.querySelector("#nameInput").value;
     let packaging = document.querySelector("#packagingInput").value;
     let description = document.querySelector("#descriptionInput").value;
     let amount = document.querySelector("#amountInput").value;
     let image = document.querySelector("#imageInput").value;
-    let userAddedSnack = {
-        name: name, 
-        packaging: packaging, 
-        description: description, 
-        amount: amount, 
-        image: image
-    }
+    console.log(debbieCakes); 
+    let newDebbieCakes = loadData("littleDebbieSnacks");
+    if(localStorage.getItem("newLittleDebbieSnacks")){
+        newDebbieCakes = loadData("newLittleDebbieSnacks")
+    } 
+    function userMadeCakeObject(snackCake, name, packaging, description, amount, image){
+        snackCake = {
+            name: name,
+            packaging: packaging,
+            description: description,
+            amount: amount,
+            image: image
+        }
+        newDebbieCakes.push(snackCake);
+        return snackCake
+    };
+    let newSnack = userMadeCakeObject(snackCake, name, packaging, description, amount, image);
+    console.log(debbieCakes);
     const snackContainer = document.querySelector(".snack-container");
     snackContainer.innerHTML +=
     `<div class="snack-card">
-    <img src="${userAddedSnack.image}" alt="${userAddedSnack.name}">
-    <div>
-    <h3>${userAddedSnack.name}</h3>
-    <p>${userAddedSnack.description}</p>
-    <p class="snack-details">${userAddedSnack.amount} - ${userAddedSnack.packaging}</p>
-    </div>
+        <img src="${newSnack.image}" alt="${newSnack.name}">
+        <div>
+            <h3>${newSnack.name}</h3>
+            <p>${newSnack.description}</p>
+            <p class="snack-details">${newSnack.amount} - ${newSnack.packaging}</p>
+        </div>
     </div>`
+    setData("newLittleDebbieSnacks", newDebbieCakes);
     let form = document.querySelector("form");
     body.removeChild(form);
     mainContent.innerHTML += 
@@ -61,11 +77,12 @@ function showForm(){
     body.insertBefore(form, script);
     const snackForm = document.querySelector("form");
     snackForm.innerHTML +=
-    `<input id="nameInput" placeholder="Name of Snack">
-    <input id="packagingInput" placeholder="Type of Packaging">
-    <input id="amountInput" placeholder="How many snacks come in the package?">
-    <input id="descriptionInput" placeholder="Describe the snack!">
-    <input id="imageInput" placeholder="Copy and Paste a URL to picture of your snacks box!">
+    `<input required id="snackNameInput" placeholder="A simple one word name for your snack" type="text">
+    <input required id="nameInput" placeholder="Title of Your Snack" type="text">
+    <input id="packagingInput" placeholder="Type of Packaging" type="text" required>
+    <input id="amountInput" placeholder="How many snacks come in the package?" type="text" required>
+    <input id="descriptionInput" placeholder="Describe the snack!" type="text" required>
+    <input id="imageInput" placeholder="Copy and Paste a URL to picture of your snacks box!" type="text" required>
     <button id="submit-form">Add Your Snack to the Collection!</button>`
     const submitSnackFormBtn = document.querySelector("#submit-form");
     submitSnackFormBtn.addEventListener("click", userAddedSnacks);
@@ -79,9 +96,21 @@ function popSnacks(){
         <img src="../images/lildeb.png" alt="Little Debbie Logo">
         <h2>SCHNAAAAAAKS!</h2>
     </header>
+    <div class="snack-girl">
+        <h2>Words From Our Sponsors:</h2>
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/L52dVwMJTEc" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/hu6eekDEiTE" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+        </div>
+    </div>
     <div class="snack-container"></div>
     <button id="add-snacks-button">Add More Snacks?</button>
-    <footer></footer>`;
+    <footer>
+        <p><small>&copy; Ricky Bruner</small></p>
+        <a href="https://github.com/ricky-bruner" target="_blank">My GitHub Profile</a>
+        <a href="https://github.com/ricky-bruner/little-debbie-lightning" target="_blank">This Repo!</a>
+        <a href="http://starlogs.net/#ricky-bruner/little-debbie-lightning" target="_blank">Something Awesome!</a>
+    </footer>`;
     const addSnacksButton = document.querySelector("#add-snacks-button");
     addSnacksButton.addEventListener("click", showForm);
     let snack = document.querySelector(".snack-container");
@@ -94,8 +123,7 @@ function popSnacks(){
                 <p>${debbieData[i].description}</p>
                 <p class="snack-details">${debbieData[i].amount} - ${debbieData[i].packaging}</p>
             </div>
-        </div>
-        `
+        </div>`
     }
 }
 
