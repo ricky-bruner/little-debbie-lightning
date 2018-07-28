@@ -97,7 +97,7 @@ function popSnacks(){
     mainContent.removeChild(showSnacks);
     mainContent.innerHTML +=
         `<header>
-            <img src="https://www.littledebbie.com/images/template/logo-home.pnggs" alt="Little Debbie Logo">
+            <img src="https://vignette.wikia.nocookie.net/peanuts/images/9/96/LittleDebbieLogo.png/revision/latest?cb=20160714075106" alt="Little Debbie Logo">
             <h2>SCHNAAAAAAKS!</h2>
         </header>
         <div class="snack-girl">
