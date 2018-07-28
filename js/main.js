@@ -50,6 +50,9 @@ function userAddedSnacks(){
     let newSnack = userMadeCakeObject(snackCake, name, packaging, description, amount, image);
     console.log(debbieCakes);
     const snackContainer = document.querySelector(".snack-container");
+    if(name === ""){
+        console.log("does this work?");
+    }else{
     snackContainer.innerHTML +=
     `<div class="snack-card">
         <img src="${newSnack.image}" alt="${newSnack.name}">
@@ -59,9 +62,10 @@ function userAddedSnacks(){
             <p class="snack-details">${newSnack.amount} - ${newSnack.packaging}</p>
         </div>
     </div>`
-    setData("newLittleDebbieSnacks", newDebbieCakes);
+    setData("newLittleDebbieSnacks", newDebbieCakes)
+    }
     let form = document.querySelector("form");
-    body.removeChild(form);
+    mainContent.removeChild(form);
     mainContent.innerHTML += 
     `<button id="add-snacks-button">Add More Snacks?</button>`;
     const addSnacksButton = document.querySelector("#add-snacks-button");
@@ -73,8 +77,9 @@ function showForm(){
     console.log("A form will be added here!");
     const addSnacksButton = document.querySelector("#add-snacks-button");
     mainContent.removeChild(addSnacksButton);
+    const footer = document.querySelector("footer");
     const form = document.createElement("form");
-    body.insertBefore(form, script);
+    mainContent.insertBefore(form, footer);
     const snackForm = document.querySelector("form");
     snackForm.innerHTML +=
     `<input required id="snackNameInput" placeholder="A simple one word name for your snack" type="text">
@@ -107,9 +112,11 @@ function popSnacks(){
     <button id="add-snacks-button">Add More Snacks?</button>
     <footer>
         <p><small>&copy; Ricky Bruner</small></p>
-        <a href="https://github.com/ricky-bruner" target="_blank">My GitHub Profile</a>
-        <a href="https://github.com/ricky-bruner/little-debbie-lightning" target="_blank">This Repo!</a>
-        <a href="http://starlogs.net/#ricky-bruner/little-debbie-lightning" target="_blank">Something Awesome!</a>
+        <div>
+            <a href="https://github.com/ricky-bruner" target="_blank">My GitHub Profile</a>
+            <a href="https://github.com/ricky-bruner/little-debbie-lightning" target="_blank">This Repo!</a>
+            <a href="http://starlogs.net/#ricky-bruner/little-debbie-lightning" target="_blank">Something Awesome!</a>
+        </div>
     </footer>`;
     const addSnacksButton = document.querySelector("#add-snacks-button");
     addSnacksButton.addEventListener("click", showForm);
