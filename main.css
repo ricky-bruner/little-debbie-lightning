@@ -1,17 +1,12 @@
 /* rgb(226, 209, 190) */
 /* rgb(223, 30, 56) */
-/* html {
-    background: 
-        radial-gradient(
-            circle, 
-            rgb(226, 209, 190), 
-            rgb(226, 209, 190), 
-            rgb(226, 209, 190), 
-            black) no-repeat;
-    background-position: fixed;
-    color: white;
-    height: 100% !important
-} */
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+html {
+    box-sizing: border-box;
+}
 body {
     background: 
         radial-gradient(
@@ -89,14 +84,6 @@ header img {
 
 .snack-girl h2 {
     text-align: center;
-    /* font-size: 3.5em;
-    font-family: "Avant Garde", Avantgarde, "Century Gothic", CenturyGothic, "AppleGothic", sans-serif;
-    color: rgb(67, 84, 150);
-    /* letter-spacing: -7px; */
-    /* font-weight: 700;
-    text-transform: uppercase;
-    animation: blur .75s ease-out infinite;
-    text-shadow: 0px 0px 5px black, 0px 0px 7px black; */
     color: rgb(255, 255, 255);
     background: radial-gradient(circle, rgb(108, 119, 164), rgb(108, 119, 164), black);
     box-shadow: inset 0 0 40px #000000;
@@ -105,7 +92,19 @@ header img {
     font-size: 4em;
     font-weight: bold;
     font-family: Helvetica;
-    text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+    text-shadow: 
+        0 1px 0 #ccc, 
+        0 2px 0 #c9c9c9, 
+        0 3px 0 #bbb, 
+        0 4px 0 #b9b9b9, 
+        0 5px 0 #aaa, 
+        0 6px 1px rgba(0,0,0,.1), 
+        0 0 5px rgba(0,0,0,.1), 
+        0 1px 3px rgba(0,0,0,.3), 
+        0 3px 5px rgba(0,0,0,.2), 
+        0 5px 10px rgba(0,0,0,.25), 
+        0 10px 10px rgba(0,0,0,.2), 
+        0 20px 20px rgba(0,0,0,.15);
 }
       
 @keyframes blur {
@@ -141,7 +140,6 @@ header img {
     margin: auto;
     display: block;
     box-shadow: 0 12px 6px -6px rgba(0, 0, 0, 0.6);
-   
 }
 
 #populateDatabase {
@@ -149,7 +147,6 @@ header img {
     height: 200px;
     display: block;
     margin: 25% auto 25%;
-    /* margin-top: 20%; */
     font-size: 2.5em;
     color: #131313;
     background: 
@@ -213,7 +210,6 @@ header img {
     height: 200px;
     display: block;
     margin: 25% auto 25%;
-    /* margin-top: 20%; */
     font-size: 2.5em;
     color: #131313;
     background: 
@@ -286,7 +282,7 @@ header img {
 }
 .snack-card {
     width: 25%;
-    height: 400px;
+    height: 420px;
     display: block;
     background-color: white;
     color: black;
@@ -384,4 +380,26 @@ form button {
     box-shadow: 0 12px 6px -6px rgba(0, 0, 0, 0.6);
     text-align: center;
     border: rgba(0, 0, 0, 0) solid 1px;
+}
+
+footer {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: black;
+    padding: 1em;
+    width: 100%;
+    display: block;
+    margin: 0;
+}
+
+footer div {
+    display: flex;
+    justify-content: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: white;
+    margin: 1em;
+    display: block;
 }
