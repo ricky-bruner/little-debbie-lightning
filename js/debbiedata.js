@@ -13,13 +13,13 @@ function makeCakeObject(snackCake, name, packaging, description, amount, image){
 }
 
 
-makeCakeObject("starCrunch", "Star Crunch", "Individually Wrapped", "A soft, chewy cookie topped with caramel and crispy rice then covered in a layer of fudge .", 12, "../images/starcrunch.jpg");
+makeCakeObject("starCrunch", "Star Crunch", "Individually Wrapped", "A soft, chewy cookie topped with caramel and crispy rice then covered in a layer of fudge .", 12, "https://target.scene7.com/is/image/Target/14996405?wid=250&hei=250&qlt=80&fmt=pjpeg");
 
-makeCakeObject("swissCakeRoll", "Swiss Cake Roll", "Twin Wrapped", "Chocolate cake rolled around a layer of creme filling and drenched with fudge coating.", 12, "../images/swisscakeroll.jpg");
+makeCakeObject("swissCakeRoll", "Swiss Cake Roll", "Twin Wrapped", "Chocolate cake rolled around a layer of creme filling and drenched with fudge coating.", 12, "https://target.scene7.com/is/image/Target/13217399?wid=250&hei=250&qlt=80&fmt=pjpeg");
 
-makeCakeObject("oatmealCremePie", "Oatmeal Creme Pie", "Individually Wrapped", "Soft oatmeal cookie patties held together by a sweet creme middle", 12, "../images/oatmealcremepie.jpg");
+makeCakeObject("oatmealCremePie", "Oatmeal Creme Pie", "Individually Wrapped", "Soft oatmeal cookie patties held together by a sweet creme middle", 12, "https://target.scene7.com/is/image/Target/14996401?wid=250&hei=250&qlt=80&fmt=pjpeg");
 
-makeCakeObject("nuttyBars", "Nutty Bars", "Twin Wrapped", "Classic crunchy wafer bars layered with peanut butter and covered in rich chocolate fudge.", 12, "../images/nuttybar.jpg");
+makeCakeObject("nuttyBars", "Nutty Bars", "Twin Wrapped", "Classic crunchy wafer bars layered with peanut butter and covered in rich chocolate fudge.", 12, "https://target.scene7.com/is/image/Target/13217400?wid=250&hei=250&qlt=80&fmt=pjpeg");
 
 
 
